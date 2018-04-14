@@ -334,6 +334,15 @@ contract BinkabiTokenSale is Pausable {
             RefundBinkabi(msg.sender, etherToRefund);
             msg.sender.transfer(etherToRefund);
         }
+
+        binkabiDepositAddress.transfer(this.balance);
+        return;
     }
+
+
+  /// @dev Ends the funding period and sends the ETH home
+  function finalize() external onlyOwner {
+    binkabiDepositAddress.transfer(this.balance);
+  }
 }
 
