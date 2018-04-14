@@ -1,0 +1,10 @@
+{
+  "name": "ico-contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "dependencies": {
+    "truffle-hdwallet-provider": "0.0.3"
+  },
+  "devDependencies": {}
+}
